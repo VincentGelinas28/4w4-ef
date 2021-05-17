@@ -1,0 +1,18 @@
+.site-footer {
+    background-color: $color__link;
+    color : #fff;
+    display : flex;
+    flex-direction: column;
+    .ligne-footer {
+        display : flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap; 
+    }
+    .widget_categories {
+        ul {
+            list-style-type: none;
+            margin: 0 0 1.5em 0em;
+        }
+    }
+}

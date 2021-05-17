@@ -1,0 +1,38 @@
+.site {
+	display: grid;
+	/* Il faut régler les proportions avec deux pourcentages */
+	grid-template-columns: 100%;
+	grid-template-areas:
+		"header header"
+		"main main"
+		"sidebar sidebar"
+		"footer footer";
+	@include desktop{
+	grid-template-columns: 80% 20%;
+	grid-template-areas:
+		"header header"
+		"main sidebar"
+		"footer footer";
+	}	
+}
+
+.site-header {
+	grid-area: header;
+	height : 25vh;
+}
+
+.site-main {
+	grid-area: main;
+	overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+}
+
+.widget-area {
+	grid-area: sidebar;
+	background-color: #eee;
+}
+
+.site-footer {
+	grid-area: footer;
+}
+
+@import "no-sidebar";
