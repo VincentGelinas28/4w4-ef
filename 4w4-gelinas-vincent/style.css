@@ -1593,3 +1593,19 @@ La barre du millieu
 .bloc_cours a {
   display: none;
 }
+
+.bloc_cours:nth-child(14) {
+  background-color: #d8d8d8;
+}
+
+.bloc_cours:nth-child(15) {
+  background-color: #d8d8d8;
+}
+
+.bloc_cours:nth-child(16) {
+  background-color: #d8d8d8;
+}
+
+.bloc_cours:nth-child(17) {
+  background-color: #d8d8d8;
+}
