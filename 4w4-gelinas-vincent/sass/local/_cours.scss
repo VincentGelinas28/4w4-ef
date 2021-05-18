@@ -28,3 +28,68 @@
         background-color: rgb(216, 216, 216);
     }
 }
+
+.bloc_Jeu{
+    border: 1px solid black;
+    width: 250px;
+    margin: 10px;
+    display: flex;
+    text-align: center;
+    background-color: white;
+
+    a{
+        display: none;
+    }
+
+    &:focus{
+        background-color: rgb(163, 0, 0);
+    }
+}
+
+.bloc_Web{
+    border: 1px solid black;
+    width: 250px;
+    margin: 10px;
+    display: flex;
+    text-align: center;
+
+    a{
+        display: none;
+    }
+
+    &:focus{
+        background-color: rgb(163, 0, 0);
+    }
+}
+
+.bloc_Conception{
+    border: 1px solid black;
+    width: 250px;
+    margin: 10px;
+    display: flex;
+    text-align: center;
+
+    a{
+        display: none;
+    }
+
+    &:focus{
+        background-color: rgb(163, 0, 0);
+    }
+}
+
+.bloc_Spécifique{
+    border: 1px solid black;
+    width: 250px;
+    margin: 10px;
+    display: flex;
+    text-align: center;
+
+    a{
+        display: none;
+    }
+
+    &:focus{
+        background-color: rgb(163, 0, 0);
+    }
+}

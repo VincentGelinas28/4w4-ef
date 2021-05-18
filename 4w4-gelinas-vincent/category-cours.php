@@ -35,14 +35,14 @@ get_header();
 				if ($tPropriété['typeCours'] != $precedent): 
 					if ("XXXXXX" != $precedent)	: ?>
 						</section>
-						<?php if (in_array($precedent, ['Web', 'Jeu', 'Spécifique'])) : ?>
+						<?php if (in_array($precedent, ['Web', 'Jeu', 'Spécifique','Conception','Imagerie_2d/3d'])) : ?>
 						<?php endif; ?>
 					<?php endif; ?>	
 					
 					<section <?php echo class_composant($tPropriété['typeCours']) ?>>
 				<?php endif ?>	
 
-				<?php if (in_array($tPropriété['typeCours'], ['Web', 'Jeu', 'Spécifique']) ) : 
+				<?php if (in_array($tPropriété['typeCours'], ['Web', 'Jeu', 'Spécifique','Conception','Imagerie_2d/3d']) ) : 
 						get_template_part( 'template-parts/content', 'cours-carrousel' ); 
 					
 
@@ -76,8 +76,20 @@ function convertirTableau(&$tPropriété)
 
 function class_composant($typeCours){
 
-	if (in_array($typeCours, ['Web', 'Jeu', 'Spécifique'])){
-		return 'class="bloc_cours"';
+	if (in_array($typeCours, ['Web'])){
+		return 'class="bloc_Web"';
+	}
+	if (in_array($typeCours, ['Jeu'])){
+		return 'class="bloc_Jeu"';
+	}
+	if (in_array($typeCours, ['Spécifique'])){
+		return 'class="bloc_Spécifique"';
+	}
+	if (in_array($typeCours, ['Conception'])){
+		return 'class="bloc_Conception"';
+	}
+	if (in_array($typeCours, ['Imagerie_2d/3d'])){
+		return 'class="bloc_Imagerie_2d/3d"';
 	}
 
 	else {

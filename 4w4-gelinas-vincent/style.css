@@ -1609,3 +1609,68 @@ La barre du millieu
 .bloc_cours:nth-child(17) {
   background-color: #d8d8d8;
 }
+
+.bloc_Jeu {
+  border: 1px solid black;
+  width: 250px;
+  margin: 10px;
+  display: flex;
+  text-align: center;
+  background-color: white;
+}
+
+.bloc_Jeu a {
+  display: none;
+}
+
+.bloc_Jeu:focus {
+  background-color: #a30000;
+}
+
+.bloc_Web {
+  border: 1px solid black;
+  width: 250px;
+  margin: 10px;
+  display: flex;
+  text-align: center;
+}
+
+.bloc_Web a {
+  display: none;
+}
+
+.bloc_Web:focus {
+  background-color: #a30000;
+}
+
+.bloc_Conception {
+  border: 1px solid black;
+  width: 250px;
+  margin: 10px;
+  display: flex;
+  text-align: center;
+}
+
+.bloc_Conception a {
+  display: none;
+}
+
+.bloc_Conception:focus {
+  background-color: #a30000;
+}
+
+.bloc_Spécifique {
+  border: 1px solid black;
+  width: 250px;
+  margin: 10px;
+  display: flex;
+  text-align: center;
+}
+
+.bloc_Spécifique a {
+  display: none;
+}
+
+.bloc_Spécifique:focus {
+  background-color: #a30000;
+}
