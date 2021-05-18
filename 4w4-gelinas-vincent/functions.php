@@ -183,14 +183,11 @@ function theme4w4_scripts() {
 	
 //	wp_register_script( 'theme4w4-carrousel', get_template_directory_uri() . '/js/carrousel.js', array(), filemtime(get_template_directory() . "/js/carrousel.js"), true );
 	wp_register_script( 'theme4w4-slider', get_template_directory_uri() . '/js/slider.js', array(), filemtime(get_template_directory() . "/js/slider.js"), true );
-	wp_register_script( 'theme4w4-api-rest', get_template_directory_uri() . '/js/api-rest.js', array(), filemtime(get_template_directory() . "/js/api-rest.js"), true );
-	wp_register_script( 'theme4w4-cours', get_template_directory_uri() . '/js/cours.js', array(), filemtime(get_template_directory() . "/js/cours.js"), true );
-	
+	wp_register_script( 'theme4w4-api-rest', get_template_directory_uri() . '/js/api-rest.js', array(), filemtime(get_template_directory() . "/js/api-rest.js"), true );	
 	if( is_front_page()){
 	//	wp_enqueue_script( 'theme4w4-carrousel');
 		wp_enqueue_script( 'theme4w4-slider');
 		wp_enqueue_script( 'theme4w4-api-rest');
-		wp_enqueue_script( 'theme4w4-cours');
 		wp_localize_script( 'theme4w4-api-rest', 'monObjJS', array(
 			'nonce' => wp_create_nonce( 'wp_rest' ),
 			'siteURL' => get_site_url()

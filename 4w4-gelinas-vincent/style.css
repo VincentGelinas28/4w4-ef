@@ -1584,10 +1584,13 @@ La barre du millieu
 
 .bloc_cours {
   border: 1px solid black;
+  height: 250px;
   width: 250px;
   margin: 10px;
-  display: flex;
-  text-align: center;
+}
+
+.bloc_cours article {
+  transform: rotate(-90deg);
 }
 
 .bloc_cours a {
@@ -1598,25 +1601,31 @@ La barre du millieu
   background-color: #d8d8d8;
 }
 
-.bloc_cours:nth-child(15) {
-  background-color: #d8d8d8;
-}
-
-.bloc_cours:nth-child(16) {
-  background-color: #d8d8d8;
-}
-
-.bloc_cours:nth-child(17) {
-  background-color: #d8d8d8;
+@media (min-width: 800px) {
+  .bloc_cours {
+    height: 150px;
+    display: flex;
+    text-align: center;
+  }
+  .bloc_cours article {
+    transform: rotate(0deg);
+  }
 }
 
 .bloc_Jeu {
   border: 1px solid black;
+  height: 250px;
   width: 250px;
   margin: 10px;
-  display: flex;
-  text-align: center;
   background-color: white;
+}
+
+.bloc_Jeu article {
+  transform: rotate(-90deg);
+}
+
+.bloc_Jeu:nth-child(16) {
+  background-color: #d8d8d8;
 }
 
 .bloc_Jeu a {
@@ -1627,12 +1636,34 @@ La barre du millieu
   background-color: #a30000;
 }
 
+@media (min-width: 800px) {
+  .bloc_Jeu {
+    height: 150px;
+    display: flex;
+    text-align: center;
+  }
+  .bloc_Jeu article {
+    transform: rotate(0deg);
+  }
+}
+
 .bloc_Web {
   border: 1px solid black;
+  height: 250px;
   width: 250px;
   margin: 10px;
-  display: flex;
-  text-align: center;
+}
+
+.bloc_Web article {
+  transform: rotate(-90deg);
+}
+
+.bloc_Web:nth-child(15) {
+  background-color: #d8d8d8;
+}
+
+.bloc_Web:nth-child(17) {
+  background-color: #d8d8d8;
 }
 
 .bloc_Web a {
@@ -1643,12 +1674,26 @@ La barre du millieu
   background-color: #a30000;
 }
 
+@media (min-width: 800px) {
+  .bloc_Web {
+    height: 150px;
+    display: flex;
+    text-align: center;
+  }
+  .bloc_Web article {
+    transform: rotate(0deg);
+  }
+}
+
 .bloc_Conception {
   border: 1px solid black;
+  height: 250px;
   width: 250px;
   margin: 10px;
-  display: flex;
-  text-align: center;
+}
+
+.bloc_Conception article {
+  transform: rotate(-90deg);
 }
 
 .bloc_Conception a {
@@ -1659,12 +1704,26 @@ La barre du millieu
   background-color: #a30000;
 }
 
+@media (min-width: 800px) {
+  .bloc_Conception {
+    height: 150px;
+    display: flex;
+    text-align: center;
+  }
+  .bloc_Conception article {
+    transform: rotate(0deg);
+  }
+}
+
 .bloc_Spécifique {
   border: 1px solid black;
+  height: 250px;
   width: 250px;
   margin: 10px;
-  display: flex;
-  text-align: center;
+}
+
+.bloc_Spécifique article {
+  transform: rotate(-90deg);
 }
 
 .bloc_Spécifique a {
@@ -1673,4 +1732,15 @@ La barre du millieu
 
 .bloc_Spécifique:focus {
   background-color: #a30000;
+}
+
+@media (min-width: 800px) {
+  .bloc_Spécifique {
+    height: 150px;
+    display: flex;
+    text-align: center;
+  }
+  .bloc_Spécifique article {
+    transform: rotate(0deg);
+  }
 }
