@@ -81,6 +81,6 @@ function class_composant($typeCours){
 	}
 
 	else {
-		return 'class="bloc"';
+		return 'class="bloc_cours"';
 	}
 }

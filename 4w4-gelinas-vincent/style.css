@@ -1576,15 +1576,20 @@ La barre du millieu
 
 /* local sidebar
 --------------------------------------------- */
-/* .category_cours{
-    .entry-content{
-        display: none;
-    }
-    .entry-footer{
-        display: none;
-    }
+.category_cours {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
 
-    h2{
-        size: 0.5rem;
-    }
-} */
+.bloc_cours {
+  border: 1px solid black;
+  width: 250px;
+  margin: 10px;
+  display: flex;
+  text-align: center;
+}
+
+.bloc_cours a {
+  display: none;
+}
