@@ -16,14 +16,13 @@ get_header();
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<section id="annonce"></section>
-				<h1 class="page-title">Accueil</h1>
+				<h1 class="page-title">Categorie Cours</h1>
 				<?php
 				//the_archive_title( '<h1 class="page-title">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
-			<section class="cours">
+			<section class="category_cours">
 			<?php
 			/* Start the Loop */
             $precedent = "XXXXXX";
@@ -37,22 +36,16 @@ get_header();
 					if ("XXXXXX" != $precedent)	: ?>
 						</section>
 						<?php if (in_array($precedent, ['Web', 'Jeu', 'Spécifique'])) : ?>
-							<section class="ctrl-carrousel">
-								<?php echo $chaine_bouton_radio;
-								$chaine_bouton_radio = '';
-								 ?>		
-							</section>
 						<?php endif; ?>
 					<?php endif; ?>	
-					<h2><?php echo $tPropriété['typeCours'] ?></h2>
+					
 					<section <?php echo class_composant($tPropriété['typeCours']) ?>>
 				<?php endif ?>	
 
 				<?php if (in_array($tPropriété['typeCours'], ['Web', 'Jeu', 'Spécifique']) ) : 
 						get_template_part( 'template-parts/content', 'cours-carrousel' ); 
-						$chaine_bouton_radio .= '<input class="rad-carrousel"  type="radio" name="rad-'.$tPropriété['typeCours'].'">';
-						elseif ($tPropriété['typeCours'] == 'Projets'):
-							get_template_part( 'template-parts/content', 'galerie' ); 
+					
+
 						else :		
 						get_template_part( 'template-parts/content', 'cours-article' ); 
 				endif;	
@@ -60,18 +53,6 @@ get_header();
 			endwhile;?>
 			</section> <!-- fin section cours -->
 		<?php endif; ?>
-		<section class="admin-rapide">
-			<h3>Ajouter un article de catégorie « Nouvelles »</h3>
-			<input type="text" name="title" placeholder="Titre">
-			<textarea name="content" ></textarea>
-			<button id='bout-rapide'>Créer une nouvelle</button>
-		</section>
-
-
-		<section class="nouvelles">
-			<!-- button id="bout_nouvelles">Afficher les 3 dernières nouvelles</button -->
-			<section></section>
-		</section>
 
 	
 
@@ -83,17 +64,6 @@ get_footer();
 
 function convertirTableau(&$tPropriété)
 {
-	/*
-	$titre = get_the_title(); 
-	// 582-1W1 Mise en page Web (75h)
-	$sigle = substr($titre, 0, 7);
-	$nbHeure = substr($titre,-4,3);
-	$titrePartiel =substr($titre,8,-6);
-	$session = substr($titre, 4,1);
-	// $contenu = get_the_content();
-	// $resume = substr($contenu, 0, 200);
-	$typeCours = get_field('type_de_cours');
-*/
 
 	$tPropriété['titre'] = get_the_title(); 
 	$tPropriété['sigle'] = substr($tPropriété['titre'], 0, 7);
@@ -107,11 +77,9 @@ function convertirTableau(&$tPropriété)
 function class_composant($typeCours){
 
 	if (in_array($typeCours, ['Web', 'Jeu', 'Spécifique'])){
-		return 'class="carrousel-2"';
+		return 'class="bloc_cours"';
 	}
-	elseif ($typeCours == 'Projets'){
-		return 'class="galerie"';
-	}
+
 	else {
 		return 'class="bloc"';
 	}

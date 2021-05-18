@@ -1573,3 +1573,18 @@ La barre du millieu
 #secondary {
   padding-left: 8%;
 }
+
+/* local sidebar
+--------------------------------------------- */
+/* .category_cours{
+    .entry-content{
+        display: none;
+    }
+    .entry-footer{
+        display: none;
+    }
+
+    h2{
+        size: 0.5rem;
+    }
+} */
